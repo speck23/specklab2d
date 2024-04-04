@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://brwf3uy3ptgl5"]
+
+[ext_resource type="Script" path="res://prefabs/ui/button_click_call.gd" id="1_7gjlf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xoxj3"]
+bg_color = Color(0.6, 0.6, 0.6, 0.12549)
+draw_center = false
+shadow_size = 4
+
+[node name="0" type="Button"]
+custom_minimum_size = Vector2(48, 48)
+focus_mode = 1
+theme_override_colors/icon_normal_color = Color(0.639216, 0.639216, 0.639216, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.639216, 0.639216, 0.639216, 1)
+theme_override_colors/icon_focus_color = Color(0.639216, 0.639216, 0.639216, 1)
+theme_override_colors/icon_disabled_color = Color(0.639216, 0.639216, 0.639216, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_xoxj3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xoxj3")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xoxj3")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_xoxj3")
+theme_override_styles/focus = SubResource("StyleBoxFlat_xoxj3")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("1_7gjlf")

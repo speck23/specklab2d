@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "sb1a60rGrcvBngGQ/yUg+JNhTxVqvptdfJUAUL95INqnqEBb0wUqDURX0eHQzTHL5p2XEuxv+MgGoN6/geo3sQ==",
+  "success": true,
+  "projectFilePath": "E:\\specklab2d\\specklab 2d.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ninja69\\.nuget\\packages\\godot.sourcegenerators\\4.2.0-dev.4\\godot.sourcegenerators.4.2.0-dev.4.nupkg.sha512",
+    "C:\\Users\\ninja69\\.nuget\\packages\\godotsharp\\4.2.0-dev.4\\godotsharp.4.2.0-dev.4.nupkg.sha512",
+    "C:\\Users\\ninja69\\.nuget\\packages\\godotsharpeditor\\4.2.0-dev.4\\godotsharpeditor.4.2.0-dev.4.nupkg.sha512",
+    "C:\\Users\\ninja69\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\ninja69\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\ninja69\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

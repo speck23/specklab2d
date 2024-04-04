@@ -1,0 +1,17 @@
+E:\specklab2d\.godot\mono\temp\bin\Debug\specklab 2d.deps.json
+E:\specklab2d\.godot\mono\temp\bin\Debug\specklab 2d.runtimeconfig.json
+E:\specklab2d\.godot\mono\temp\bin\Debug\specklab 2d.dll
+E:\specklab2d\.godot\mono\temp\bin\Debug\specklab 2d.pdb
+E:\specklab2d\.godot\mono\temp\bin\Debug\GodotSharp.dll
+E:\specklab2d\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+E:\specklab2d\.godot\mono\temp\obj\Debug\specklab 2d.csproj.AssemblyReference.cache
+E:\specklab2d\.godot\mono\temp\obj\Debug\specklab 2d.GeneratedMSBuildEditorConfig.editorconfig
+E:\specklab2d\.godot\mono\temp\obj\Debug\specklab 2d.AssemblyInfoInputs.cache
+E:\specklab2d\.godot\mono\temp\obj\Debug\specklab 2d.AssemblyInfo.cs
+E:\specklab2d\.godot\mono\temp\obj\Debug\specklab 2d.csproj.CoreCompileInputs.cache
+E:\specklab2d\.godot\mono\temp\obj\Debug\specklab 2d.csproj.CopyComplete
+E:\specklab2d\.godot\mono\temp\obj\Debug\specklab 2d.dll
+E:\specklab2d\.godot\mono\temp\obj\Debug\refint\specklab 2d.dll
+E:\specklab2d\.godot\mono\temp\obj\Debug\specklab 2d.pdb
+E:\specklab2d\.godot\mono\temp\obj\Debug\specklab 2d.genruntimeconfig.cache
+E:\specklab2d\.godot\mono\temp\obj\Debug\ref\specklab 2d.dll

@@ -1,0 +1,579 @@
+[gd_scene load_steps=9 format=3 uid="uid://d0kaeaqsm5qs7"]
+
+[ext_resource type="Script" path="res://assets/render_vp.gd" id="1_mbyyo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vthwb"]
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qou8d"]
+bg_color = Color(0.282353, 0.592157, 0.658824, 1)
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1r8h"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+border_width_left = 7
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 7
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_syy14"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 8
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwvce"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xkkos"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6oukv"]
+bg_color = Color(0.12, 0.12, 0.12, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="Node2D" type="Node2D"]
+
+[node name="bgb" type="Panel" parent="."]
+offset_right = 256.0
+offset_bottom = 256.0
+
+[node name="icon" type="Node2D" parent="."]
+visible = false
+position = Vector2(32, 16)
+
+[node name="wand" type="Control" parent="icon"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 40.0
+offset_top = 72.0
+offset_right = 80.0
+offset_bottom = 112.0
+rotation = -0.785398
+
+[node name="Panel" type="Panel" parent="icon/wand"]
+layout_mode = 0
+offset_right = 20.0
+offset_bottom = 202.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vthwb")
+
+[node name="Panel2" type="Panel" parent="icon/wand"]
+visible = false
+layout_mode = 0
+offset_top = -48.0
+offset_right = 24.0
+offset_bottom = -24.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_vthwb")
+
+[node name="plus" type="Control" parent="icon"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 56.0
+
+[node name="plus" type="Panel" parent="icon/plus"]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 48.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qou8d")
+
+[node name="Panel4" type="Panel" parent="icon/plus"]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 32.0
+offset_bottom = 80.0
+rotation = -1.5708
+theme_override_styles/panel = SubResource("StyleBoxFlat_qou8d")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(256, 256)
+script = ExtResource("1_mbyyo")
+path = "res://assets/icons/gravity_multi.png"
+
+[node name="icons_play_stop" type="Node2D" parent="SubViewport"]
+visible = false
+position = Vector2(32, 16)
+
+[node name="box" type="Control" parent="SubViewport/icons_play_stop"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 40.0
+offset_top = 72.0
+offset_right = 80.0
+offset_bottom = 112.0
+
+[node name="Panel" type="Panel" parent="SubViewport/icons_play_stop/box"]
+layout_mode = 0
+offset_left = -48.0
+offset_right = 160.0
+offset_bottom = 144.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_k1r8h")
+
+[node name="sign_play" type="Panel" parent="SubViewport/icons_play_stop/box"]
+visible = false
+layout_mode = 0
+offset_left = 32.0
+offset_top = 40.0
+offset_right = 96.0
+offset_bottom = 104.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_syy14")
+
+[node name="sign_stop" type="Panel" parent="SubViewport/icons_play_stop/box"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 40.0
+offset_right = 96.0
+offset_bottom = 104.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iwvce")
+
+[node name="plus" type="Control" parent="SubViewport/icons_play_stop"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 56.0
+
+[node name="Panel4" type="Panel" parent="SubViewport/icons_play_stop/plus"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 48.0
+offset_right = 8.0
+offset_bottom = 256.0
+rotation = -1.74533
+theme_override_styles/panel = SubResource("StyleBoxFlat_xkkos")
+
+[node name="icons_gravity" type="Node2D" parent="SubViewport"]
+position = Vector2(32, 16)
+
+[node name="box" type="Control" parent="SubViewport/icons_gravity"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 40.0
+offset_top = 72.0
+offset_right = 80.0
+offset_bottom = 112.0
+
+[node name="Panel" type="Panel" parent="SubViewport/icons_gravity/box"]
+layout_mode = 0
+offset_left = -48.0
+offset_right = 160.0
+offset_bottom = 144.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_k1r8h")
+
+[node name="sign_play" type="Panel" parent="SubViewport/icons_gravity/box"]
+visible = false
+layout_mode = 0
+offset_left = 32.0
+offset_top = 40.0
+offset_right = 96.0
+offset_bottom = 104.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_syy14")
+
+[node name="sign_stop" type="Panel" parent="SubViewport/icons_gravity/box"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 40.0
+offset_right = 96.0
+offset_bottom = 104.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iwvce")
+
+[node name="plus" type="Control" parent="SubViewport/icons_gravity"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 16.0
+offset_top = 176.0
+offset_right = 56.0
+offset_bottom = 216.0
+
+[node name="Panel4" type="Panel" parent="SubViewport/icons_gravity/plus"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = 48.0
+offset_right = 8.0
+offset_bottom = 256.0
+rotation = -1.74533
+theme_override_styles/panel = SubResource("StyleBoxFlat_xkkos")
+
+[node name="arrow_dwn0" type="Control" parent="SubViewport/icons_gravity"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 40.0
+offset_top = 176.0
+offset_right = 80.0
+offset_bottom = 216.0
+
+[node name="Panel4" type="Panel" parent="SubViewport/icons_gravity/arrow_dwn0"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -112.0
+offset_bottom = -16.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel5" type="Panel" parent="SubViewport/icons_gravity/arrow_dwn0"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -2.26893
+pivot_offset = Vector2(11, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel6" type="Panel" parent="SubViewport/icons_gravity/arrow_dwn0"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -4.01426
+pivot_offset = Vector2(13, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="arrow_dwn1" type="Control" parent="SubViewport/icons_gravity"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 176.0
+offset_top = 176.0
+offset_right = 216.0
+offset_bottom = 216.0
+
+[node name="Panel4" type="Panel" parent="SubViewport/icons_gravity/arrow_dwn1"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -112.0
+offset_bottom = -16.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel5" type="Panel" parent="SubViewport/icons_gravity/arrow_dwn1"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -2.26893
+pivot_offset = Vector2(11, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel6" type="Panel" parent="SubViewport/icons_gravity/arrow_dwn1"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -4.01426
+pivot_offset = Vector2(13, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="x" type="Control" parent="SubViewport/icons_gravity"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 96.0
+offset_top = 112.0
+offset_right = 136.0
+offset_bottom = 152.0
+
+[node name="Panel4" type="Panel" parent="SubViewport/icons_gravity/x"]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -82.0
+offset_right = 12.0
+offset_bottom = 82.0
+rotation = -0.785398
+pivot_offset = Vector2(12, 82)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel5" type="Panel" parent="SubViewport/icons_gravity/x"]
+layout_mode = 0
+offset_left = -12.0
+offset_top = -82.0
+offset_right = 12.0
+offset_bottom = 82.0
+rotation = 0.785398
+pivot_offset = Vector2(12, 82)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Control" type="Control" parent="SubViewport/icons_gravity"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 48.0
+offset_top = 64.0
+offset_right = 88.0
+offset_bottom = 104.0
+scale = Vector2(0.5, 0.5)
+
+[node name="arrow_cnt0" type="Control" parent="SubViewport/icons_gravity/Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -8.0
+offset_top = -24.0
+offset_right = 32.0
+offset_bottom = 16.0
+rotation = -0.785397
+
+[node name="Panel4" type="Panel" parent="SubViewport/icons_gravity/Control/arrow_cnt0"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -112.0
+offset_bottom = -16.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel5" type="Panel" parent="SubViewport/icons_gravity/Control/arrow_cnt0"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -2.26893
+pivot_offset = Vector2(11, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel6" type="Panel" parent="SubViewport/icons_gravity/Control/arrow_cnt0"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -4.01426
+pivot_offset = Vector2(13, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Control2" type="Control" parent="SubViewport/icons_gravity"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 48.0
+offset_top = 64.0
+offset_right = 88.0
+offset_bottom = 104.0
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+
+[node name="arrow_cnt0" type="Control" parent="SubViewport/icons_gravity/Control2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -8.0
+offset_top = -24.0
+offset_right = 32.0
+offset_bottom = 16.0
+rotation = -0.785397
+
+[node name="Panel4" type="Panel" parent="SubViewport/icons_gravity/Control2/arrow_cnt0"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -112.0
+offset_bottom = -16.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel5" type="Panel" parent="SubViewport/icons_gravity/Control2/arrow_cnt0"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -2.26893
+pivot_offset = Vector2(11, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel6" type="Panel" parent="SubViewport/icons_gravity/Control2/arrow_cnt0"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -4.01426
+pivot_offset = Vector2(13, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="arrow_cnt1" type="Control" parent="SubViewport/icons_gravity/Control2"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 48.0
+offset_bottom = 64.0
+rotation = 2.35619
+
+[node name="Panel4" type="Panel" parent="SubViewport/icons_gravity/Control2/arrow_cnt1"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -112.0
+offset_bottom = -16.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel5" type="Panel" parent="SubViewport/icons_gravity/Control2/arrow_cnt1"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -2.26893
+pivot_offset = Vector2(11, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel6" type="Panel" parent="SubViewport/icons_gravity/Control2/arrow_cnt1"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -4.01426
+pivot_offset = Vector2(13, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Control3" type="Control" parent="SubViewport/icons_gravity"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 146.0
+offset_top = 162.0
+offset_right = 146.0
+offset_bottom = 162.0
+scale = Vector2(0.5, 0.5)
+
+[node name="arrow_cnt1" type="Control" parent="SubViewport/icons_gravity/Control3"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 48.0
+offset_bottom = 64.0
+rotation = 2.35619
+
+[node name="Panel4" type="Panel" parent="SubViewport/icons_gravity/Control3/arrow_cnt1"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -112.0
+offset_bottom = -16.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel5" type="Panel" parent="SubViewport/icons_gravity/Control3/arrow_cnt1"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -2.26893
+pivot_offset = Vector2(11, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel6" type="Panel" parent="SubViewport/icons_gravity/Control3/arrow_cnt1"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -4.01426
+pivot_offset = Vector2(13, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Control4" type="Control" parent="SubViewport/icons_gravity"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 146.0
+offset_top = 162.0
+offset_right = 146.0
+offset_bottom = 162.0
+rotation = 1.5708
+scale = Vector2(0.5, 0.5)
+
+[node name="arrow_cnt0" type="Control" parent="SubViewport/icons_gravity/Control4"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -8.0
+offset_top = -24.0
+offset_right = 32.0
+offset_bottom = 16.0
+rotation = -0.785397
+
+[node name="Panel4" type="Panel" parent="SubViewport/icons_gravity/Control4/arrow_cnt0"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -112.0
+offset_bottom = -16.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel5" type="Panel" parent="SubViewport/icons_gravity/Control4/arrow_cnt0"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -2.26893
+pivot_offset = Vector2(11, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel6" type="Panel" parent="SubViewport/icons_gravity/Control4/arrow_cnt0"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -4.01426
+pivot_offset = Vector2(13, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="arrow_cnt1" type="Control" parent="SubViewport/icons_gravity/Control4"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 48.0
+offset_bottom = 64.0
+rotation = 2.35619
+
+[node name="Panel4" type="Panel" parent="SubViewport/icons_gravity/Control4/arrow_cnt1"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -112.0
+offset_bottom = -16.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel5" type="Panel" parent="SubViewport/icons_gravity/Control4/arrow_cnt1"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -2.26893
+pivot_offset = Vector2(11, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")
+
+[node name="Panel6" type="Panel" parent="SubViewport/icons_gravity/Control4/arrow_cnt1"]
+layout_mode = 0
+offset_left = -24.0
+offset_top = -24.0
+offset_bottom = 24.0
+rotation = -4.01426
+pivot_offset = Vector2(13, 0)
+theme_override_styles/panel = SubResource("StyleBoxFlat_6oukv")

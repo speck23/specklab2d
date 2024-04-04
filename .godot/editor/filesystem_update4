@@ -1,0 +1,8 @@
+res://scenes/base.tscn
+res://prefabs/ui/item_icon_prefab.tscn
+res://assets/drawing_etc.tscn
+res://scripts/ActionManager.cs
+res://scripts/physics/AudioManager.cs
+res://scripts/physics/PhysicsScene.cs
+res://scripts/utill/editor/BodyEditorPreview.cs
+res://scripts/utill/scene_preload.cs
